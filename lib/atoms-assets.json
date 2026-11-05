@@ -1,0 +1,187 @@
+[
+  {
+    "alt": "Mike - AI 团队领导 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Mike-TeamLeader-Avatar_origin.DmBYWaXT.webp",
+    "local": "/atoms/Mike-TeamLeader-Avatar_origin.DmBYWaXT.webp"
+  },
+  {
+    "alt": "Adrian - AI 广告专家 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Adrian-AdsAgent-Avatar.D1HVIhCr.png",
+    "local": "/atoms/Adrian-AdsAgent-Avatar.D1HVIhCr.png"
+  },
+  {
+    "alt": "Sarah - AI SEO 专家 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Sarah-SEOSpecialist-Avatar_origin.DYHquUJp.webp",
+    "local": "/atoms/Sarah-SEOSpecialist-Avatar_origin.DYHquUJp.webp"
+  },
+  {
+    "alt": "Emma - AI 产品经理 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Emma-ProductManager-Avatar_origin.BBeqkRr7.webp",
+    "local": "/atoms/Emma-ProductManager-Avatar_origin.BBeqkRr7.webp"
+  },
+  {
+    "alt": "Bob - AI 架构师 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Bob-Architect-Avatar_origin.Cdi-oMPW.webp",
+    "local": "/atoms/Bob-Architect-Avatar_origin.Cdi-oMPW.webp"
+  },
+  {
+    "alt": "Alex - AI 工程师 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Alex-Engineer-Avatar_origin.zHMG8gqX.webp",
+    "local": "/atoms/Alex-Engineer-Avatar_origin.zHMG8gqX.webp"
+  },
+  {
+    "alt": "David - AI 数据分析师 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/David-DataAnalyst-Avatar_origin.CahzHabe.webp",
+    "local": "/atoms/David-DataAnalyst-Avatar_origin.CahzHabe.webp"
+  },
+  {
+    "alt": "Iris - AI 深度研究员 Agent",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Iris-DeepResearcher-Avatar_origin.uohFf0-y.webp",
+    "local": "/atoms/Iris-DeepResearcher-Avatar_origin.uohFf0-y.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/saas-landing/poster.webp",
+    "local": "/atoms/saas-landing.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/independent-brands/poster.webp",
+    "local": "/atoms/independent-brands.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/film-studio/poster.webp",
+    "local": "/atoms/film-studio.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/popular/poster.webp",
+    "local": "/atoms/popular.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/creative-video/poster.webp",
+    "local": "/atoms/creative-video.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/founder-builds/shooting-game/poster.webp",
+    "local": "/atoms/shooting-game.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/why-do-people-trust-atoms/globe/dotted-globe.webp?url&no-inline",
+    "local": "/atoms/dotted-globe.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/why-do-people-trust-atoms/story/creating-courses-poster.webp?url&no-inline",
+    "local": "/atoms/creating-courses-poster.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/home/v1.3.x/validation/github-stars-chart.webp?url&no-inline",
+    "local": "/atoms/github-stars-chart.webp"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/logo_wall/light/openai.svg",
+    "local": "/atoms/openai.svg"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/logo_wall/light/nvidia.svg",
+    "local": "/atoms/nvidia.svg"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/logo_wall/light/google.svg",
+    "local": "/atoms/google.svg"
+  },
+  {
+    "alt": "",
+    "src": "https://public-frontend-cos.metadl.com/commonfile/logo_wall/light/microsoft.svg",
+    "local": "/atoms/microsoft.svg"
+  },
+  {
+    "alt": "Deep Researcher",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/iris.cWsNABAt.png",
+    "local": "/atoms/iris.cWsNABAt.png"
+  },
+  {
+    "alt": "Architect",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/bob.CK05J5j-.png",
+    "local": "/atoms/bob.CK05J5j-.png"
+  },
+  {
+    "alt": "Product Manager",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/emma.FA-Uedmf.png",
+    "local": "/atoms/emma.FA-Uedmf.png"
+  },
+  {
+    "alt": "Team Leader",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/mike.D6cuK4WP.png",
+    "local": "/atoms/mike.D6cuK4WP.png"
+  },
+  {
+    "alt": "SEO Specialist",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/sarah.DTbX6FUU.png",
+    "local": "/atoms/sarah.DTbX6FUU.png"
+  },
+  {
+    "alt": "Engineer",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/alex.CKCZrO3-.png",
+    "local": "/atoms/alex.CKCZrO3-.png"
+  },
+  {
+    "alt": "Data Analyst",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/david.BH0CUhJj.png",
+    "local": "/atoms/david.BH0CUhJj.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/2.cu10e4p4.png",
+    "local": "/atoms/2.cu10e4p4.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/3.xG7SjSLn.png",
+    "local": "/atoms/3.xG7SjSLn.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/4.BPQEa1AB.png",
+    "local": "/atoms/4.BPQEa1AB.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/5.ImuIZqcW.png",
+    "local": "/atoms/5.ImuIZqcW.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/main.DGt_P6Ei.png",
+    "local": "/atoms/main.DGt_P6Ei.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/1.D886DBu4.png",
+    "local": "/atoms/1.D886DBu4.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/2.DeoBqn1x.png",
+    "local": "/atoms/2.DeoBqn1x.png"
+  },
+  {
+    "alt": "preview",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/light-1.D-QZgQBZ.png",
+    "local": "/atoms/light-1.D-QZgQBZ.png"
+  },
+  {
+    "alt": "Atoms",
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Union.CbOOVtn6.svg",
+    "local": "/atoms/Union.CbOOVtn6.svg"
+  }
+]

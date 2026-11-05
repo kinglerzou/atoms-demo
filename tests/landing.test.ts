@@ -1,0 +1,7 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {showcases,showcaseHTML} from '../lib/showcases.ts';
+import {planPrice,proTiers,maxTiers,footerGroups,resourceLinks,faqs} from '../lib/landing-data.ts';
+test('six distinct complete runnable showcases with valid inline scripts',()=>{assert.equal(showcases.length,6);const outputs=showcases.map((_,i)=>showcaseHTML(i));assert.equal(new Set(outputs).size,6);for(const html of outputs){assert.match(html,/<!DOCTYPE html>/);assert.match(html,/<\/html>$/);for(const match of html.matchAll(/<script>([\s\S]*?)<\/script>/g))assert.doesNotThrow(()=>new Function(match[1]));}});
+test('pricing updates annual discount and every tier consistently',()=>{assert.equal(planPrice(100,false),20);assert.equal(planPrice(100,true),15.8);assert.equal(planPrice(250,false),50);assert.equal(planPrice(500,true),79);assert.equal(planPrice(0,true),0);for(const credits of [...proTiers,...maxTiers]){assert.ok(planPrice(credits,true)<planPrice(credits,false));assert.equal(Math.round(planPrice(credits,true)*100),Math.round(planPrice(credits,false)*79));}});
+test('navigation uses real destinations and nine FAQs have answers',()=>{const links=[...resourceLinks,...footerGroups.flatMap<readonly [string,string]>(([,l])=>l)];for(const [,url] of links)assert.match(url,/^(https:\/\/|#[a-z])/);assert.equal(faqs.length,9);assert.ok(faqs.every(([q,a])=>q.length>0&&a.length>30));});
