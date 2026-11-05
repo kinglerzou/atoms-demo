@@ -1,0 +1,12 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {generate,extractHTML} from '../lib/generation.ts';
+import {templateHTML} from '../lib/templates.ts';
+const request=(body:unknown)=>new Request('http://localhost/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+test('no credentials returns clear 503 without upstream call',async()=>{const r=await generate(request({prompt:'build'}),{});assert.equal(r.status,503)});
+test('invalid input rejected',async()=>{const r=await generate(request({prompt:''}),{key:'test'});assert.equal(r.status,400)});
+test('foreign origin rejected',async()=>{const r=await generate(new Request('http://localhost/api/generate',{method:'POST',headers:{Origin:'https://evil.example'},body:'{}'}),{key:'test'});assert.equal(r.status,403)});
+test('plan-build-check-done stream passes existing app to engineer',async()=>{const calls:any[]=[];const mock=async(_:unknown,options:any)=>{calls.push(JSON.parse(options.body));return Response.json({output:[{content:[{type:'output_text',text:calls.length===1?'1. Add task filter':templateHTML(0)}]}]})};const r=await generate(request({prompt:'add filter',html:'previous app'}),{key:'test'},mock as typeof fetch);const events=(await r.text()).trim().split('\n').map(x=>JSON.parse(x));assert.deepEqual(events.map(e=>e.stage),['plan','plan','build','check','done']);assert.match(calls[1].input,/previous app/);assert.match(events.at(-1).html,/<\/html>/)});
+test('provider failure is surfaced and not presented as success',async()=>{const r=await generate(request({prompt:'build'}),{key:'test'},(async()=>new Response('',{status:401})) as typeof fetch);const events=(await r.text()).trim().split('\n').map(x=>JSON.parse(x));assert.equal(events.at(-1).stage,'error');assert.match(events.at(-1).message,/认证失败/)});
+test('incomplete HTML is rejected',()=>assert.throws(()=>extractHTML('<div>hello</div>')));
+test('all template inline scripts compile',()=>{for(let i=0;i<3;i++){const html=templateHTML(i);assert.match(html,/<\/html>/);const script=html.match(/<script>([\s\S]*?)<\/script>/)![1];assert.doesNotThrow(()=>new Function(script))}});
