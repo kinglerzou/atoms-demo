@@ -6,7 +6,7 @@
 
 - **在线体验**：[Cloudflare 部署](https://atoms-demo.zoujian283827940.workers.dev)
 - **工作台**：[进入 Studio](https://atoms-demo.zoujian283827940.workers.dev/studio)
-- **源码仓库**：[kinglerzou/atoms-demo](https://github.com/kinglerzou/atoms-demo)（私有仓库，需访问权限）
+- **源码仓库**：[kinglerzou/atoms-demo](https://github.com/kinglerzou/atoms-demo)（公开仓库，可直接浏览和克隆）
 - **参考产品**：[Atoms](https://atoms.dev/zh)
 
 > 本项目是独立学习 Demo，非 Atoms 官方服务。官网中的商业套餐、账号系统、广告投放与云产品没有在本项目中完整实现；具体范围见下文。
@@ -30,7 +30,7 @@
 
 ## 快速开始
 
-需要 **Node.js >= 22.13**，推荐 Node.js 24，以及 npm。访问私有仓库需要 GitHub 授权。
+需要 **Node.js >= 22.13**，推荐 Node.js 24，以及 npm。仓库已公开，浏览和 HTTPS 克隆无需 GitHub 授权。
 
 ```bash
 git clone https://github.com/kinglerzou/atoms-demo.git

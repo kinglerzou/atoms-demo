@@ -10,7 +10,7 @@
 
 - 在线网站：https://atoms-demo.zoujian283827940.workers.dev
 - 工作台：https://atoms-demo.zoujian283827940.workers.dev/studio
-- 源码仓库：https://github.com/kinglerzou/atoms-demo（私有，需授权）
+- 源码仓库：https://github.com/kinglerzou/atoms-demo（公开，可直接浏览和克隆）
 - 技术方案：React 19、TypeScript、Vinext/Vite、Cloudflare Workers、Responses API、浏览器本地存储。
 - 已验证模型：用户配置服务中的 `deepseek-flash`。密钥、服务地址与模型名称通过服务端 Secrets 配置。
 
@@ -149,7 +149,7 @@
 | 交付项 | 当前状态 |
 | --- | --- |
 | 在线体验 | Cloudflare Workers 已发布，接口验证通过 |
-| 源码 | 已上传 GitHub 私有仓库，包含提交历史 |
+| 源码 | 已上传 GitHub 公开仓库，可直接浏览和克隆，包含提交历史 |
 | 本地启动 | 提供依赖安装、环境模板和开发命令 |
 | 模型配置 | 支持 Key、基地址、模型名称三个参数；已有 Secret 同步脚本 |
 | 部署说明 | README 覆盖首次部署、代码更新、参数更新和常见问题 |
