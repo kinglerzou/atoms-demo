@@ -1,0 +1,42 @@
+.workflow-reference{padding-top:90px;padding-bottom:110px}
+.landing .workflow-reference>h2{font-size:48px;line-height:1.17;font-weight:600;letter-spacing:-1.6px;margin-bottom:80px;opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.workflow-reference>h2 span{display:block}
+.landing .workflow-reference.flow-visible>h2{opacity:1;transform:none}
+.flow-panel{display:grid;grid-template-columns:44% minmax(0,1fr);background:var(--surface);border-radius:16px;overflow:hidden;min-height:530px}
+.flow-desktop-options{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:13px;padding:0 40px}
+.flow-choice{background:var(--bg);padding:20px 24px;border-radius:32px;max-width:100%;width:fit-content;transition:background .3s ease}
+.flow-choice.selected{width:100%}
+.flow-choice:not(.selected) .flow-description{width:0}
+.flow-choice:not(.selected) h3{white-space:nowrap}
+.flow-choice h3{margin:0}
+.landing .flow-choice h3>button{font-size:18px;font-weight:600;line-height:1.45;display:block;width:100%;text-align:left;padding:0;background:none;color:var(--ink)}
+.landing .flow-choice h3>button:hover{color:var(--blue);background:none}
+.flow-description{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .3s cubic-bezier(.26,.15,0,.92),opacity .3s ease}
+.flow-description>div{min-height:0;overflow:hidden}
+.flow-choice.selected .flow-description{grid-template-rows:1fr;opacity:1}
+.landing .flow-choice p{font-size:16px;line-height:1.5;padding-top:12px;color:var(--ink)}
+.landing .flow-try{min-height:64px;padding:16px 24px;font-size:16px;margin-top:5px}
+.flow-media{position:relative;min-width:0;min-height:530px;overflow:hidden;background:#e2e8f2}
+.flow-slide{position:absolute;inset:0;opacity:0;transform:translateX(var(--flow-offset,30px));transition:transform .4s cubic-bezier(.25,.46,.45,.94),opacity .4s;pointer-events:none;will-change:opacity,transform}
+.flow-slide.active{opacity:1;transform:translateX(0);transition-delay:.2s;z-index:2}
+.flow-slide.previous{z-index:1}
+.flow-slide>img{width:100%;height:100%;object-fit:cover;display:block}
+.flow-film-stage{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:38px;background:linear-gradient(#427fa5,#f1eed6);position:relative}
+.flow-film-stage:after{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' opacity='.17' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");opacity:.5}
+.flow-film-shell{position:relative;width:100%;aspect-ratio:1.5;padding:8px;border-radius:16px;background:#ffffff1a;backdrop-filter:blur(1px);z-index:1;overflow:hidden}
+.flow-film-shell video{position:relative;display:block;width:100%;height:100%;object-fit:contain;border-radius:12px;opacity:0;transition:opacity .3s}
+.flow-film-shell video.ready{opacity:1}
+.flow-film-fallback{position:absolute;inset:8px;background:#f9f9fd;border-radius:12px;display:flex;flex-direction:column;justify-content:center;padding:25px;color:#2d334a;gap:14px}
+.flow-film-fallback span{font-size:12px;color:#6169ce}
+.flow-film-fallback strong{font-size:23px;line-height:1.4}
+.flow-film-fallback p{font-size:12px}
+.flow-film-fallback i{width:80%;height:5px;background:#e3e5f4;border-radius:9px}
+.flow-film-fallback i:last-child{width:48%}
+.landing .flow-pause{position:absolute;right:16px;bottom:16px;z-index:4;border-radius:50%;width:34px;height:34px;background:#ffffffd9;color:#333b50;display:flex;align-items:center;justify-content:center;border:1px solid #ffffff80;backdrop-filter:blur(10px)}
+.landing .flow-pause:hover{background:white}
+.flow-mobile-copy{display:none}
+@media(max-width:1199px){.flow-panel{grid-template-columns:320px minmax(0,1fr);min-height:420px}.flow-desktop-options{display:none}.flow-mobile-copy{display:flex;flex-direction:column;padding:32px;min-width:0}.flow-mobile-text{animation:flow-copy-in .4s ease}.flow-mobile-text h3{font-size:23px;line-height:1.4;margin-bottom:12px}.landing .flow-mobile-text p{font-size:17px;line-height:1.6}.flow-mobile-footer{display:flex;flex-direction:column;gap:24px;align-items:flex-start;margin-top:auto;padding-top:24px}.flow-media{min-height:420px}.flow-dots{display:flex;align-items:center;gap:10px}.landing .flow-dots button{width:8px;height:8px;background:#d9d9df;border-radius:8px;padding:0;transition:background .25s,width .25s}.landing .flow-dots button.active{background:#81818c;width:20px}.flow-film-stage{padding:24px}}
+@media(max-width:900px){.workflow-reference{padding-top:65px;padding-bottom:75px}.landing .workflow-reference>h2{font-size:40px;margin-bottom:45px}.flow-panel{display:flex;flex-direction:column-reverse;min-height:0}.flow-media{min-height:0;height:auto;aspect-ratio:1.3}.flow-mobile-copy{padding:24px;min-height:260px}.flow-mobile-footer{flex-direction:row;align-items:center;justify-content:space-between}.flow-film-stage{padding:30px}}
+@media(max-width:480px){.workflow-reference{padding-top:55px;padding-bottom:65px}.landing .workflow-reference>h2{font-size:32px;line-height:1.3;letter-spacing:-1px;margin-bottom:35px}.flow-panel{border-radius:16px}.flow-mobile-copy{padding:24px;min-height:290px;touch-action:pan-y}.flow-mobile-text h3{font-size:20px}.landing .flow-mobile-text p{font-size:15px;line-height:1.7}.flow-mobile-footer{flex-direction:column;align-items:flex-start;gap:24px}.flow-mobile-footer .blue-button{font-size:14px;padding:10px 20px}.flow-film-stage{padding:18px}.flow-film-fallback{padding:15px;gap:9px}.flow-film-fallback strong{font-size:18px}.flow-film-fallback span,.flow-film-fallback p{font-size:10px}.flow-film-fallback i{height:3px}.flow-pause{right:10px!important;bottom:10px!important}}
+@keyframes flow-copy-in{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.landing .workflow-reference>h2{opacity:1;transform:none}.flow-slide,.flow-description,.flow-mobile-text{animation:none!important;transition:none!important}}
