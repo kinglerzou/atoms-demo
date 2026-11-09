@@ -19,17 +19,18 @@ function useComposerTypewriter(enabled:boolean,english:boolean){
  useEffect(()=>{
   const lines=composerExamples[english?'en':'zh'];
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let timer:ReturnType<typeof setTimeout>,line=0,length=0,deleting=false;
+  let timer:ReturnType<typeof setTimeout>,line=0,length=0;
   const tick=()=>{
    if(document.hidden){timer=setTimeout(tick,400);return}
    const value=lines[line];
-   length+=deleting?-1:1;setText(value.slice(0,length));
-   let delay=deleting?35:95;
-   if(!deleting&&length===value.length){deleting=true;delay=1800}
-   else if(deleting&&length===0){deleting=false;line=(line+1)%lines.length;delay=450}
-   timer=setTimeout(tick,delay);
+   if(length===value.length){
+    setText('');length=0;line=(line+1)%lines.length;
+    timer=setTimeout(tick,450);return;
+   }
+   length+=1;setText(value.slice(0,length));
+   timer=setTimeout(tick,length===value.length?1800:95);
   };
-  const start=()=>{clearTimeout(timer);line=0;length=0;deleting=false;if(reduced.matches){setText(lines[0]);return}if(enabled){setText('');timer=setTimeout(tick,450)}};
+  const start=()=>{clearTimeout(timer);line=0;length=0;if(reduced.matches){setText(lines[0]);return}if(enabled){setText('');timer=setTimeout(tick,450)}};
   start();reduced.addEventListener('change',start);
   return()=>{clearTimeout(timer);reduced.removeEventListener('change',start)};
  },[enabled,english]);
