@@ -28,7 +28,7 @@ export default function Landing(){
    if(!reduced.matches&&!document.hidden&&!hovered&&!focused&&!touching&&now>teamResumeAt.current){
     const width=period();if(width){
      if(track.scrollLeft<=0)track.scrollLeft+=width;
-     remainder+=elapsed*0.035;const pixels=Math.floor(remainder);remainder-=pixels;
+     remainder+=elapsed*0.07;const pixels=Math.floor(remainder);remainder-=pixels;
      if(pixels)track.scrollLeft-=pixels;
     }
    }
