@@ -183,5 +183,30 @@
     "alt": "Atoms",
     "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/Union.CbOOVtn6.svg",
     "local": "/atoms/Union.CbOOVtn6.svg"
+  },
+  {
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/light-2.HQudE2Kh.png",
+    "alt": "功能展示参考",
+    "local": "/atoms/light-2.HQudE2Kh.png"
+  },
+  {
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/light-3.BzA-Yc4H.png",
+    "alt": "功能展示参考",
+    "local": "/atoms/light-3.BzA-Yc4H.png"
+  },
+  {
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/light-4.CrMDqrfR.png",
+    "alt": "功能展示参考",
+    "local": "/atoms/light-4.CrMDqrfR.png"
+  },
+  {
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/light-5.BoVltOAp.png",
+    "alt": "功能展示参考",
+    "local": "/atoms/light-5.BoVltOAp.png"
+  },
+  {
+    "src": "https://public-frontend-cos.metadl.com/nuxt-mgx/prod/assets/5.CvYp2tZM.png",
+    "alt": "功能展示参考",
+    "local": "/atoms/5.CvYp2tZM.png"
   }
 ]
