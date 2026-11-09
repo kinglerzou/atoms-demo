@@ -111,3 +111,18 @@ npm run build
 首页预览为临时体验；克隆后的业务数据由工作台存储桥持久化。套餐仅演示选择与计算，不创建订阅、不收费；登录入口解释无需注册，并提供官网跳转。官方文章、社交渠道、完整商业功能是外链。语言切换覆盖导航及主要标题，未包含官网全部语言及全部内容翻译。参考图片保留原权利归属，数据展示明确注明为官网公开信息。
 
 本次验证：桌面/390px 手机无横向溢出，资源菜单、案例业务操作及克隆、套餐计费、FAQ 切换经过浏览器操作。自动测试包含六套案例脚本语法、定价档位计算、FAQ/链接结构；未接入真实模型密钥，因此不声称已验证线上 AI 输出。
+
+## 部署到自己的 Cloudflare Workers
+
+使用已安装的 Wrangler，先在 Cloudflare 账号中确认 Workers Free 套餐。
+
+```bash
+npx wrangler login
+npm run build
+npx wrangler deploy --config wrangler.cloudflare.json
+node scripts/cloudflare-secrets.mjs
+```
+
+最后一条命令仅从本机被 Git 忽略的 `.dev.vars` 读取 `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`OPENAI_MODEL`，通过标准输入直接发送到 Cloudflare Secrets，不打印参数内容。该操作需要事先登录并完成首次部署。
+
+部署后使用 Wrangler 返回的 `workers.dev` 地址。后续在 Cloudflare 控制台的 Workers & Pages → atoms-demo → Settings → Variables and Secrets 可管理配置。模型服务商需支持 Responses API，模型费用独立于 Cloudflare 托管费用。免费套餐资源不足时应先诊断，不要自动升级付费。
